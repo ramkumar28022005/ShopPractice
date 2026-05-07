@@ -1,0 +1,17 @@
+com\shoppractice\tests\FormValidationTest.class
+com\shoppractice\pages\DashboardPage.class
+com\shoppractice\listeners\RetryAnalyzer.class
+com\shoppractice\pages\CheckoutPage.class
+com\shoppractice\pages\OrderDetailsPage.class
+com\shoppractice\tests\BaseTest.class
+com\shoppractice\pages\LoginPage.class
+com\shoppractice\tests\OrderHistoryTest.class
+com\shoppractice\utils\ExtentReporter.class
+com\shoppractice\tests\ShoppingCartTest.class
+com\shoppractice\tests\LoginTest.class
+com\shoppractice\tests\ProductListingTest.class
+com\shoppractice\pages\BasePage.class
+com\shoppractice\pages\CartPage.class
+com\shoppractice\pages\OrderHistoryPage.class
+com\shoppractice\config\ConfigReader.class
+com\shoppractice\listeners\TestListener.class
