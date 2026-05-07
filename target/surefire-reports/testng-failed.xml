@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [ShopPractice Automation Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="com.shoppractice.listeners.TestListener"/>
+  </listeners>
+  <test thread-count="2" parallel="tests" name="E-Commerce Tests(failed)" verbose="0">
+    <classes>
+      <class name="com.shoppractice.tests.ShoppingCartTest">
+        <methods>
+          <include name="verifyProceedToCheckout"/>
+          <include name="setup"/>
+          <include name="verifyCartProducts"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.shoppractice.tests.ShoppingCartTest -->
+      <class name="com.shoppractice.tests.OrderHistoryTest">
+        <methods>
+          <include name="setup"/>
+          <include name="verifyOrderDetails"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.shoppractice.tests.OrderHistoryTest -->
+      <class name="com.shoppractice.tests.ProductListingTest">
+        <methods>
+          <include name="verifyAddToCartAndBadgeUpdate"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="verifyMultipleProductsCanBeAdded"/>
+        </methods>
+      </class> <!-- com.shoppractice.tests.ProductListingTest -->
+    </classes>
+  </test> <!-- E-Commerce Tests(failed) -->
+</suite> <!-- Failed suite [ShopPractice Automation Suite] -->

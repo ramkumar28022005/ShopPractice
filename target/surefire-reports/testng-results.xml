@@ -1,9 +1,452 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+<testng-results ignored="0" total="14" passed="9" failed="5" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-07T13:11:14 IST" name="ShopPractice Automation Suite" finished-at="2026-05-07T13:11:14 IST" duration-ms="0">
+  <suite started-at="2026-05-07T16:13:28 IST" name="ShopPractice Automation Suite" finished-at="2026-05-07T16:18:31 IST" duration-ms="302738">
     <groups>
     </groups>
+    <test started-at="2026-05-07T16:13:28 IST" name="E-Commerce Tests" finished-at="2026-05-07T16:18:31 IST" duration-ms="302738">
+      <class name="com.shoppractice.tests.ShoppingCartTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.shoppractice.tests.ShoppingCartTest@70cf32e3]" started-at="2026-05-07T16:15:32 IST" name="setup" finished-at="2026-05-07T16:15:36 IST" duration-ms="3973" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyCartProducts()[pri:0, instance:com.shoppractice.tests.ShoppingCartTest@70cf32e3]" started-at="2026-05-07T16:15:36 IST" name="verifyCartProducts" finished-at="2026-05-07T16:16:19 IST" duration-ms="43104" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at com.shoppractice.tests.ShoppingCartTest.verifyCartProducts(ShoppingCartTest.java:18)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:842)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCartProducts -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.shoppractice.tests.ShoppingCartTest@70cf32e3]" started-at="2026-05-07T16:16:19 IST" name="tearDown" finished-at="2026-05-07T16:16:19 IST" duration-ms="303" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.shoppractice.tests.ShoppingCartTest@70cf32e3]" started-at="2026-05-07T16:16:19 IST" name="setup" finished-at="2026-05-07T16:16:22 IST" duration-ms="2917" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyDeleteProductFromCart()[pri:0, instance:com.shoppractice.tests.ShoppingCartTest@70cf32e3]" started-at="2026-05-07T16:16:22 IST" name="verifyDeleteProductFromCart" finished-at="2026-05-07T16:17:18 IST" duration-ms="55615" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDeleteProductFromCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.shoppractice.tests.ShoppingCartTest@70cf32e3]" started-at="2026-05-07T16:17:18 IST" name="tearDown" finished-at="2026-05-07T16:17:18 IST" duration-ms="344" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.shoppractice.tests.ShoppingCartTest@70cf32e3]" started-at="2026-05-07T16:17:18 IST" name="setup" finished-at="2026-05-07T16:17:21 IST" duration-ms="3184" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyProceedToCheckout()[pri:0, instance:com.shoppractice.tests.ShoppingCartTest@70cf32e3]" started-at="2026-05-07T16:17:21 IST" name="verifyProceedToCheckout" finished-at="2026-05-07T16:17:44 IST" duration-ms="23045" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: .totalRow button' (tried for 10 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: .totalRow button' (tried for 10 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.shoppractice.pages.BasePage.waitForElementToAppear(BasePage.java:23)
+at com.shoppractice.pages.BasePage.click(BasePage.java:35)
+at com.shoppractice.pages.CartPage.goToCheckout(CartPage.java:48)
+at com.shoppractice.tests.ShoppingCartTest.verifyProceedToCheckout(ShoppingCartTest.java:38)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".totalRow button"}
+  (Session info: chrome=147.0.7727.102)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8483a21ab3355005bf2a7191a179583f, findElement {using=css selector, value=.totalRow button}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.102, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\RAMKUMAR\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64845}, goog:processID: 29140, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64845/devtoo..., se:cdpVersion: 147.0.7727.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8483a21ab3355005bf2a7191a179583f
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy12.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+... 26 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyProceedToCheckout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.shoppractice.tests.ShoppingCartTest@70cf32e3]" started-at="2026-05-07T16:17:45 IST" name="tearDown" finished-at="2026-05-07T16:17:45 IST" duration-ms="288" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.shoppractice.tests.ShoppingCartTest -->
+      <class name="com.shoppractice.tests.FormValidationTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.shoppractice.tests.FormValidationTest@72bc6553]" started-at="2026-05-07T16:13:46 IST" name="setup" finished-at="2026-05-07T16:13:49 IST" duration-ms="3181" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyLoginWithEmptyFields()[pri:0, instance:com.shoppractice.tests.FormValidationTest@72bc6553]" started-at="2026-05-07T16:13:49 IST" name="verifyLoginWithEmptyFields" finished-at="2026-05-07T16:13:49 IST" duration-ms="335" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithEmptyFields -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.shoppractice.tests.FormValidationTest@72bc6553]" started-at="2026-05-07T16:13:49 IST" name="tearDown" finished-at="2026-05-07T16:13:49 IST" duration-ms="205" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.shoppractice.tests.FormValidationTest -->
+      <class name="com.shoppractice.tests.ProductListingTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.shoppractice.tests.ProductListingTest@66982506]" started-at="2026-05-07T16:13:49 IST" name="setup" finished-at="2026-05-07T16:13:51 IST" duration-ms="1774" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyAddToCartAndBadgeUpdate()[pri:0, instance:com.shoppractice.tests.ProductListingTest@66982506]" started-at="2026-05-07T16:13:51 IST" name="verifyAddToCartAndBadgeUpdate" finished-at="2026-05-07T16:14:34 IST" duration-ms="42797" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Product not added to cart expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Product not added to cart expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at com.shoppractice.tests.ProductListingTest.verifyAddToCartAndBadgeUpdate(ProductListingTest.java:34)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:842)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddToCartAndBadgeUpdate -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.shoppractice.tests.ProductListingTest@66982506]" started-at="2026-05-07T16:14:34 IST" name="tearDown" finished-at="2026-05-07T16:14:34 IST" duration-ms="260" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.shoppractice.tests.ProductListingTest@66982506]" started-at="2026-05-07T16:14:34 IST" name="setup" finished-at="2026-05-07T16:14:38 IST" duration-ms="3951" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyDashboardLoadsProducts()[pri:0, instance:com.shoppractice.tests.ProductListingTest@66982506]" started-at="2026-05-07T16:14:38 IST" name="verifyDashboardLoadsProducts" finished-at="2026-05-07T16:14:39 IST" duration-ms="878" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDashboardLoadsProducts -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.shoppractice.tests.ProductListingTest@66982506]" started-at="2026-05-07T16:14:39 IST" name="tearDown" finished-at="2026-05-07T16:14:39 IST" duration-ms="192" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.shoppractice.tests.ProductListingTest@66982506]" started-at="2026-05-07T16:14:39 IST" name="setup" finished-at="2026-05-07T16:14:43 IST" duration-ms="3261" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyMultipleProductsCanBeAdded()[pri:0, instance:com.shoppractice.tests.ProductListingTest@66982506]" started-at="2026-05-07T16:14:43 IST" name="verifyMultipleProductsCanBeAdded" finished-at="2026-05-07T16:15:27 IST" duration-ms="44178" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at com.shoppractice.tests.ProductListingTest.verifyMultipleProductsCanBeAdded(ProductListingTest.java:44)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:842)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMultipleProductsCanBeAdded -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.shoppractice.tests.ProductListingTest@66982506]" started-at="2026-05-07T16:15:27 IST" name="tearDown" finished-at="2026-05-07T16:15:27 IST" duration-ms="334" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.shoppractice.tests.ProductListingTest@66982506]" started-at="2026-05-07T16:15:27 IST" name="setup" finished-at="2026-05-07T16:15:31 IST" duration-ms="3198" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyProductCardDetails()[pri:0, instance:com.shoppractice.tests.ProductListingTest@66982506]" started-at="2026-05-07T16:15:31 IST" name="verifyProductCardDetails" finished-at="2026-05-07T16:15:32 IST" duration-ms="1059" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyProductCardDetails -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.shoppractice.tests.ProductListingTest@66982506]" started-at="2026-05-07T16:15:32 IST" name="tearDown" finished-at="2026-05-07T16:15:32 IST" duration-ms="197" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.shoppractice.tests.ProductListingTest -->
+      <class name="com.shoppractice.tests.LoginTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.shoppractice.tests.LoginTest@24569dba]" started-at="2026-05-07T16:13:28 IST" name="setup" finished-at="2026-05-07T16:13:33 IST" duration-ms="4738" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyLoginFailure(java.lang.String,java.lang.String)[pri:0, instance:com.shoppractice.tests.LoginTest@24569dba]" started-at="2026-05-07T16:13:33 IST" name="verifyLoginFailure" data-provider="invalidLoginData" finished-at="2026-05-07T16:13:34 IST" duration-ms="803" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[anshika@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[wrongPassword]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginFailure -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.shoppractice.tests.LoginTest@24569dba]" started-at="2026-05-07T16:13:34 IST" name="tearDown" finished-at="2026-05-07T16:13:34 IST" duration-ms="194" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.shoppractice.tests.LoginTest@24569dba]" started-at="2026-05-07T16:13:34 IST" name="setup" finished-at="2026-05-07T16:13:37 IST" duration-ms="2880" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyLoginFailure(java.lang.String,java.lang.String)[pri:0, instance:com.shoppractice.tests.LoginTest@24569dba]" started-at="2026-05-07T16:13:37 IST" name="verifyLoginFailure" data-provider="invalidLoginData" finished-at="2026-05-07T16:13:38 IST" duration-ms="787" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[wrongemail@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Iamking@000]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginFailure -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.shoppractice.tests.LoginTest@24569dba]" started-at="2026-05-07T16:13:38 IST" name="tearDown" finished-at="2026-05-07T16:13:38 IST" duration-ms="177" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.shoppractice.tests.LoginTest@24569dba]" started-at="2026-05-07T16:13:38 IST" name="setup" finished-at="2026-05-07T16:13:40 IST" duration-ms="2055" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyLogout(java.lang.String,java.lang.String)[pri:0, instance:com.shoppractice.tests.LoginTest@24569dba]" started-at="2026-05-07T16:13:40 IST" name="verifyLogout" data-provider="validLoginData" finished-at="2026-05-07T16:13:41 IST" duration-ms="1197" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[anshika@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Iamking@000]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.shoppractice.tests.LoginTest@24569dba]" started-at="2026-05-07T16:13:41 IST" name="tearDown" finished-at="2026-05-07T16:13:41 IST" duration-ms="196" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.shoppractice.tests.LoginTest@24569dba]" started-at="2026-05-07T16:13:41 IST" name="setup" finished-at="2026-05-07T16:13:44 IST" duration-ms="3040" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifySuccessfulLogin(java.lang.String,java.lang.String)[pri:0, instance:com.shoppractice.tests.LoginTest@24569dba]" started-at="2026-05-07T16:13:44 IST" name="verifySuccessfulLogin" data-provider="validLoginData" finished-at="2026-05-07T16:13:45 IST" duration-ms="916" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[anshika@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Iamking@000]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySuccessfulLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.shoppractice.tests.LoginTest@24569dba]" started-at="2026-05-07T16:13:45 IST" name="tearDown" finished-at="2026-05-07T16:13:46 IST" duration-ms="203" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.shoppractice.tests.LoginTest -->
+      <class name="com.shoppractice.tests.OrderHistoryTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.shoppractice.tests.OrderHistoryTest@5a59ca5e]" started-at="2026-05-07T16:17:45 IST" name="setup" finished-at="2026-05-07T16:17:57 IST" duration-ms="11707" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyOrderDetails()[pri:0, instance:com.shoppractice.tests.OrderHistoryTest@5a59ca5e]" started-at="2026-05-07T16:17:57 IST" name="verifyOrderDetails" finished-at="2026-05-07T16:18:01 IST" duration-ms="4577" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [ZARA COAT 3] but found [69fc6d4ae83610b531cf130a]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [ZARA COAT 3] but found [69fc6d4ae83610b531cf130a]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at com.shoppractice.tests.OrderHistoryTest.verifyOrderDetails(OrderHistoryTest.java:26)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:842)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyOrderDetails -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.shoppractice.tests.OrderHistoryTest@5a59ca5e]" started-at="2026-05-07T16:18:01 IST" name="tearDown" finished-at="2026-05-07T16:18:02 IST" duration-ms="294" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.shoppractice.tests.OrderHistoryTest@5a59ca5e]" started-at="2026-05-07T16:18:02 IST" name="setup" finished-at="2026-05-07T16:18:25 IST" duration-ms="23476" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyOrderHistoryDisplay()[pri:0, instance:com.shoppractice.tests.OrderHistoryTest@5a59ca5e]" started-at="2026-05-07T16:18:25 IST" name="verifyOrderHistoryDisplay" finished-at="2026-05-07T16:18:31 IST" duration-ms="5605" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyOrderHistoryDisplay -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.shoppractice.tests.OrderHistoryTest@5a59ca5e]" started-at="2026-05-07T16:18:31 IST" name="tearDown" finished-at="2026-05-07T16:18:31 IST" duration-ms="285" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.shoppractice.tests.OrderHistoryTest -->
+    </test> <!-- E-Commerce Tests -->
   </suite> <!-- ShopPractice Automation Suite -->
 </testng-results>
