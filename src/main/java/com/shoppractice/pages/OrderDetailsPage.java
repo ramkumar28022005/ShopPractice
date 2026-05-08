@@ -15,11 +15,11 @@ public class OrderDetailsPage extends BasePage {
     }
 
     public String getProductName() {
-        for(WebElement el : colTexts) {
+        for (WebElement el : colTexts) {
             String text = el.getAttribute("innerText");
-            if(text != null) {
+            if (text != null) {
                 text = text.trim();
-                if(!text.matches("^[a-fA-F0-9]{24}$") && !text.isEmpty() && !text.equalsIgnoreCase("order summary")) {
+                if (!text.matches("^[a-fA-F0-9]{24}$") && !text.isEmpty() && !text.equalsIgnoreCase("order summary")) {
                     return text;
                 }
             }
