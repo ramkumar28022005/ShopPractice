@@ -8,8 +8,10 @@ com\shoppractice\pages\LoginPage.class
 com\shoppractice\tests\OrderHistoryTest.class
 com\shoppractice\utils\ExtentReporter.class
 com\shoppractice\tests\ShoppingCartTest.class
+com\shoppractice\pages\RegisterPage.class
 com\shoppractice\tests\LoginTest.class
 com\shoppractice\tests\ProductListingTest.class
+com\shoppractice\tests\ScratchTest.class
 com\shoppractice\pages\BasePage.class
 com\shoppractice\pages\CartPage.class
 com\shoppractice\pages\OrderHistoryPage.class

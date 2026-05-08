@@ -47,12 +47,17 @@ public class DashboardPage extends BasePage {
     public void addProductToCart(String productName) {
         WebElement prod = getProductByName(productName);
         prod.findElement(addToCart).click();
-        waitForElementToAppear(driver.findElement(toastMessage));
-        waitForElementToDisappear(driver.findElement(spinner));
+        wait.until(org.openqa.selenium.support.ui.ExpectedConditions.invisibilityOfElementLocated(spinner));
+        wait.until(org.openqa.selenium.support.ui.ExpectedConditions.invisibilityOfElementLocated(toastMessage));
     }
 
     public CartPage goToCartPage() {
-        click(cartButton);
+        try {
+            click(cartButton);
+        } catch (org.openqa.selenium.ElementClickInterceptedException e) {
+            org.openqa.selenium.JavascriptExecutor js = (org.openqa.selenium.JavascriptExecutor) driver;
+            js.executeScript("arguments[0].click();", cartButton);
+        }
         return new CartPage(driver);
     }
     
@@ -64,5 +69,31 @@ public class DashboardPage extends BasePage {
     public LoginPage logout() {
         click(signOutButton);
         return new LoginPage(driver);
+    }
+
+    public int getCartBadgeCount() {
+        try {
+            String countText = cartButton.getText();
+            String numberOnly = countText.replaceAll("[^0-9]", "");
+            return numberOnly.isEmpty() ? 0 : Integer.parseInt(numberOnly);
+        } catch (Exception e) {
+            return 0;
+        }
+    }
+
+    public void waitForCartBadgeToUpdate(int expectedCount) {
+        wait.until(driver -> getCartBadgeCount() >= expectedCount);
+    }
+
+    public String getProductPrice(String productName) {
+        WebElement prod = getProductByName(productName);
+        if (prod != null) {
+            String text = prod.getText();
+            String[] parts = text.split("\\$");
+            if (parts.length > 1) {
+                return parts[1].trim().split("\\n")[0]; // Extract price value
+            }
+        }
+        return null;
     }
 }

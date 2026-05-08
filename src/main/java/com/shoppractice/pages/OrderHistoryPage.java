@@ -34,4 +34,15 @@ public class OrderHistoryPage extends BasePage {
         }
         return new OrderDetailsPage(driver);
     }
+
+    public boolean verifyOrderDetailsPresent(String productName) {
+        for (int i = 0; i < productNames.size(); i++) {
+            if (productNames.get(i).getText().equalsIgnoreCase(productName)) {
+                WebElement row = productNames.get(i).findElement(org.openqa.selenium.By.xpath("parent::tr"));
+                String orderId = row.findElement(org.openqa.selenium.By.xpath("th")).getText();
+                return orderId != null && !orderId.trim().isEmpty();
+            }
+        }
+        return false;
+    }
 }

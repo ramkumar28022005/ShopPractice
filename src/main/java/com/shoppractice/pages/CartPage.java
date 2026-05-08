@@ -48,4 +48,17 @@ public class CartPage extends BasePage {
         click(checkoutButton);
         return new CheckoutPage(driver);
     }
+
+    public String getProductPrice(String productName) {
+        try {
+            return driver.findElement(org.openqa.selenium.By.xpath("//h3[text()='" + productName + "']/parent::div/parent::div/div[@class='prodTotal cartSection']/p")).getText().trim();
+        } catch (Exception e) {
+            // fallback
+            return driver.findElement(org.openqa.selenium.By.xpath("//h3[text()='" + productName + "']/following-sibling::p")).getText().trim();
+        }
+    }
+
+    public String getTotalCartPrice() {
+        return driver.findElement(org.openqa.selenium.By.cssSelector(".totalRow .value")).getText().trim();
+    }
 }

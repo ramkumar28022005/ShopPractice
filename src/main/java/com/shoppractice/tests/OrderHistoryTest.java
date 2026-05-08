@@ -25,4 +25,12 @@ public class OrderHistoryTest extends BaseTest {
         OrderDetailsPage detailsPage = ordersPage.viewOrderDetails("ZARA COAT 3");
         Assert.assertEquals(detailsPage.getProductName(), "ZARA COAT 3");
     }
+
+    @Test
+    public void verifyOrderHistoryEntryDetails() {
+        LoginPage loginPage = new LoginPage(getDriver());
+        DashboardPage dashboardPage = loginPage.login("anshika@gmail.com", "Iamking@000");
+        OrderHistoryPage ordersPage = dashboardPage.goToOrdersPage();
+        Assert.assertTrue(ordersPage.verifyOrderDetailsPresent("ZARA COAT 3"), "Order ID and Date are not fully present for ZARA COAT 3");
+    }
 }

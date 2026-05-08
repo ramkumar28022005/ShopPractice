@@ -21,6 +21,9 @@ public class LoginPage extends BasePage {
     @FindBy(css = ".invalid-feedback")
     private WebElement validationError;
 
+    @FindBy(css = ".text-reset")
+    private WebElement registerLink;
+
     public LoginPage(WebDriver driver) {
         super(driver);
     }
@@ -44,5 +47,10 @@ public class LoginPage extends BasePage {
 
     public void submitForm() {
         click(loginButton);
+    }
+
+    public RegisterPage goToRegisterPage() {
+        click(registerLink);
+        return new RegisterPage(driver);
     }
 }

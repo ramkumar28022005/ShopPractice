@@ -13,9 +13,25 @@ public class ShoppingCartTest extends BaseTest {
     public void verifyCartProducts() {
         LoginPage loginPage = new LoginPage(getDriver());
         DashboardPage dashboardPage = loginPage.login("anshika@gmail.com", "Iamking@000");
+        String priceOnDashboard = dashboardPage.getProductPrice("ZARA COAT 3");
         dashboardPage.addProductToCart("ZARA COAT 3");
         CartPage cartPage = dashboardPage.goToCartPage();
-        Assert.assertTrue(cartPage.verifyProductDisplay("ZARA COAT 3"));
+        Assert.assertTrue(cartPage.verifyProductDisplay("ZARA COAT 3"), "Product name not found in cart");
+        String priceOnCart = cartPage.getProductPrice("ZARA COAT 3");
+        Assert.assertNotNull(priceOnCart, "Could not fetch price from cart");
+        Assert.assertTrue(priceOnCart.contains(priceOnDashboard) || priceOnDashboard.contains(priceOnCart), "Price mismatch");
+    }
+
+    @Test
+    public void verifyTotalCartPrice() {
+        LoginPage loginPage = new LoginPage(getDriver());
+        DashboardPage dashboardPage = loginPage.login("anshika@gmail.com", "Iamking@000");
+        dashboardPage.addProductToCart("ZARA COAT 3");
+        dashboardPage.addProductToCart("ADIDAS ORIGINAL");
+        CartPage cartPage = dashboardPage.goToCartPage();
+        String total = cartPage.getTotalCartPrice();
+        Assert.assertNotNull(total, "Total price is not displayed");
+        Assert.assertFalse(total.isEmpty(), "Total price is empty");
     }
 
     @Test

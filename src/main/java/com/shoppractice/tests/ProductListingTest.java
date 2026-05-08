@@ -29,7 +29,11 @@ public class ProductListingTest extends BaseTest {
     public void verifyAddToCartAndBadgeUpdate() {
         LoginPage loginPage = new LoginPage(getDriver());
         DashboardPage dashboardPage = loginPage.login("anshika@gmail.com", "Iamking@000");
+        int initialCount = dashboardPage.getCartBadgeCount();
         dashboardPage.addProductToCart("ZARA COAT 3");
+        dashboardPage.waitForCartBadgeToUpdate(initialCount + 1);
+        int newCount = dashboardPage.getCartBadgeCount();
+        Assert.assertTrue(newCount > initialCount, "Cart badge count did not update");
         CartPage cartPage = dashboardPage.goToCartPage();
         Assert.assertTrue(cartPage.verifyProductDisplay("ZARA COAT 3"), "Product not added to cart");
     }
