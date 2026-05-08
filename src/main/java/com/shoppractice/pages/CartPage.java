@@ -3,6 +3,7 @@ package com.shoppractice.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.By;
 
 import java.util.List;
 
@@ -23,9 +24,11 @@ public class CartPage extends BasePage {
 
     public boolean verifyProductDisplay(String productName) {
         try {
-            waitForElementsToAppear(cartProducts);
-        } catch (Exception e) {}
-        return cartProducts.stream().anyMatch(product -> product.getText().equalsIgnoreCase(productName));
+            waitForElementToAppear(By.cssSelector(".cartSection h3"));
+            return cartProducts.stream().anyMatch(product -> product.getText().equalsIgnoreCase(productName));
+        } catch (Exception e) {
+            return false;
+        }
     }
 
     public void deleteProduct(String productName) {

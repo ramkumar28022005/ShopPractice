@@ -64,12 +64,19 @@ public class RegisterPage extends BasePage {
     }
 
     public String getValidationError() {
-        for (WebElement error : validationErrors) {
-            try {
-                if (error.isDisplayed()) {
-                    return error.getText();
-                }
-            } catch (Exception e) {}
+        long endTime = System.currentTimeMillis() + 5000;
+        while (System.currentTimeMillis() < endTime) {
+            for (WebElement error : validationErrors) {
+                try {
+                    if (error.isDisplayed()) {
+                        String text = error.getText();
+                        if (text != null && !text.isEmpty()) {
+                            return text;
+                        }
+                    }
+                } catch (Exception e) {}
+            }
+            try { Thread.sleep(200); } catch (Exception e) {}
         }
         return "";
     }

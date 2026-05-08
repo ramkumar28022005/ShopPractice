@@ -23,6 +23,10 @@ public class BasePage {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
+    protected void waitForElementToAppear(org.openqa.selenium.By findBy) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
+    }
+
     protected void waitForElementsToAppear(List<WebElement> elements) {
         wait.until(ExpectedConditions.visibilityOfAllElements(elements));
     }

@@ -42,8 +42,12 @@ public class ProductListingTest extends BaseTest {
     public void verifyMultipleProductsCanBeAdded() {
         LoginPage loginPage = new LoginPage(getDriver());
         DashboardPage dashboardPage = loginPage.login("anshika@gmail.com", "Iamking@000");
+        int count1 = dashboardPage.getCartBadgeCount();
         dashboardPage.addProductToCart("ZARA COAT 3");
+        dashboardPage.waitForCartBadgeToUpdate(count1 + 1);
+        int count2 = dashboardPage.getCartBadgeCount();
         dashboardPage.addProductToCart("ADIDAS ORIGINAL");
+        dashboardPage.waitForCartBadgeToUpdate(count2 + 1);
         CartPage cartPage = dashboardPage.goToCartPage();
         Assert.assertTrue(cartPage.verifyProductDisplay("ZARA COAT 3"));
         Assert.assertTrue(cartPage.verifyProductDisplay("ADIDAS ORIGINAL"));

@@ -14,7 +14,9 @@ public class ShoppingCartTest extends BaseTest {
         LoginPage loginPage = new LoginPage(getDriver());
         DashboardPage dashboardPage = loginPage.login("anshika@gmail.com", "Iamking@000");
         String priceOnDashboard = dashboardPage.getProductPrice("ZARA COAT 3");
+        int count1 = dashboardPage.getCartBadgeCount();
         dashboardPage.addProductToCart("ZARA COAT 3");
+        dashboardPage.waitForCartBadgeToUpdate(count1 + 1);
         CartPage cartPage = dashboardPage.goToCartPage();
         Assert.assertTrue(cartPage.verifyProductDisplay("ZARA COAT 3"), "Product name not found in cart");
         String priceOnCart = cartPage.getProductPrice("ZARA COAT 3");
@@ -26,8 +28,12 @@ public class ShoppingCartTest extends BaseTest {
     public void verifyTotalCartPrice() {
         LoginPage loginPage = new LoginPage(getDriver());
         DashboardPage dashboardPage = loginPage.login("anshika@gmail.com", "Iamking@000");
+        int count2 = dashboardPage.getCartBadgeCount();
         dashboardPage.addProductToCart("ZARA COAT 3");
+        dashboardPage.waitForCartBadgeToUpdate(count2 + 1);
+        int count3 = dashboardPage.getCartBadgeCount();
         dashboardPage.addProductToCart("ADIDAS ORIGINAL");
+        dashboardPage.waitForCartBadgeToUpdate(count3 + 1);
         CartPage cartPage = dashboardPage.goToCartPage();
         String total = cartPage.getTotalCartPrice();
         Assert.assertNotNull(total, "Total price is not displayed");
@@ -38,8 +44,12 @@ public class ShoppingCartTest extends BaseTest {
     public void verifyDeleteProductFromCart() {
         LoginPage loginPage = new LoginPage(getDriver());
         DashboardPage dashboardPage = loginPage.login("anshika@gmail.com", "Iamking@000");
+        int count4 = dashboardPage.getCartBadgeCount();
         dashboardPage.addProductToCart("ZARA COAT 3");
+        dashboardPage.waitForCartBadgeToUpdate(count4 + 1);
+        int count5 = dashboardPage.getCartBadgeCount();
         dashboardPage.addProductToCart("ADIDAS ORIGINAL");
+        dashboardPage.waitForCartBadgeToUpdate(count5 + 1);
         CartPage cartPage = dashboardPage.goToCartPage();
         cartPage.deleteProduct("ZARA COAT 3");
         Assert.assertFalse(cartPage.verifyProductDisplay("ZARA COAT 3"), "Product was not deleted from cart");
@@ -49,7 +59,9 @@ public class ShoppingCartTest extends BaseTest {
     public void verifyProceedToCheckout() {
         LoginPage loginPage = new LoginPage(getDriver());
         DashboardPage dashboardPage = loginPage.login("anshika@gmail.com", "Iamking@000");
+        int count = dashboardPage.getCartBadgeCount();
         dashboardPage.addProductToCart("ZARA COAT 3");
+        dashboardPage.waitForCartBadgeToUpdate(count + 1);
         CartPage cartPage = dashboardPage.goToCartPage();
         CheckoutPage checkoutPage = cartPage.goToCheckout();
         checkoutPage.selectCountry("india");
